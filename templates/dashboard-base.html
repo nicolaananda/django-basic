@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<main>
+<header class="flex justify-between items-center p-2 border-b">
+<div class="text-bold">Dashboard</div>
+<div class="underline text-bold"> {{name}}</div>
+<div class="flex items-center gap-1">Logout</div>
+</header>
+<div>{% block page%} {% endblock %}</div>
+</main>
+{% endblock %}
+
+{% block aside %}
+<nav class="p-4">
+    <ul class="space-y-2">
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Course</a></li>
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Archive</a></li>
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Students</a></li>
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Assignments</a></li>
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Grades</a></li>
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Calendar</a></li>
+        <li><a href="#" class="block hover:bg-white hover:text-black p-2 rounded">Settings</a></li>
+    </ul>
+</nav>
+{% endblock %}

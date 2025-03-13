@@ -1,0 +1,9 @@
+{% extends 'dashboard-base.html' %}{% block page %}
+
+        {% for note in notes %}
+            {% include 'components/note-card.html' with note=note %}
+
+{% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DJANGO Superman</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+       <link rel="stylesheet" href="{% static 'main.css' %}">
+    </head>
+    <body>
+        <main class="flex w-full h-screen">
+            
+            <aside class="bg-red-700 text-white w-[250px] h-full p-6 shadow-lg">
+                {% block aside %} {% endblock %}
+            </aside>
+            <section class="flex-1  p-8">
+                {% block content %}{% endblock %}
+            </section>
+            </main>
+    </body>
+</html>
